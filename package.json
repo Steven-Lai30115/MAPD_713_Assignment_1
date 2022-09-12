@@ -1,0 +1,19 @@
+{
+  "name": "mapd_713_assignment_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steven-Lai30115/MAPD_713_Assignment_1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Steven-Lai30115/MAPD_713_Assignment_1/issues"
+  },
+  "homepage": "https://github.com/Steven-Lai30115/MAPD_713_Assignment_1#readme"
+}
