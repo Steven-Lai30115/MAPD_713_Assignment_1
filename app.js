@@ -1,12 +1,12 @@
 const express = require("express");
 const res = require("express/lib/response");
-
 const app = express();
 
-console.log("Server is listening at http://127.0.0.1:9000/");
-console.log(
-  "Endpoints: http://127.0.0.1:9000/images \nmethod: GET, POST, DELETE"
-);
+
+const PORT = 9000;
+
+console.log(`Server is running on port ${PORT}`);
+console.log(`Endpoints: http://127.0.0.1:${PORT}/images \nmethod: GET, POST, DELETE`);
 
 // Endpoint
 
@@ -29,4 +29,4 @@ app.delete("/images", (req, res) => {
 });
 
 // server listening on port 9000
-app.listen(9000);
+app.listen(PORT);
