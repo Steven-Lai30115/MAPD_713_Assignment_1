@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const imageSchema = new Schema({
+const imageSchema = mongoose.Schema({
   imageID: {type: Number , required : true},
   name: {type: String , required : true},
   url: {type: String , required : true},
