@@ -7,8 +7,7 @@ const postImageValidation = (data) => {
         url: Joi.string().required(),
         size: Joi.string().required(),
     });
-
-    console.log(data);
+    
     return schema.validate(data);
 }
 
