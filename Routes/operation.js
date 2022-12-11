@@ -4,8 +4,10 @@ const { postImageValidation } = require("../Routes/validation");
 const bodyParser = require("body-parser");
 
 // create application/json parser
-var jsonParser = bodyParser.json();
+var jsonParser = bodyParser.json({limit: "50mb"});
+// app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
 
+// each type of request counter
 var getCounter = 0;
 var postCounter = 0;
 var deleteCounter = 0;
@@ -24,6 +26,18 @@ router.get("/images", async (req, res) => {
     res.status(404).send("No images found");
   }
 
+  res.send(allImages);
+});
+
+//Get image by id
+router.get("/images/:id", async (req, res) => {
+  console.log("products GET: sending response");
+  getCounter++;
+  console.log(
+    `Processed Request Count --> GET : ${getCounter}, POST : ${postCounter}, Delete : ${deleteCounter}`
+  );
+  const filter = { imageID: req.params.id };
+  const allImages = await Image.findOne(filter);
   res.send(allImages);
 });
 

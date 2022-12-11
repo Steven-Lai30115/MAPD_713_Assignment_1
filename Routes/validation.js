@@ -2,10 +2,8 @@ const Joi = require("joi")
 
 const postImageValidation = (data) => {
     const schema = Joi.object({
-        imageID: Joi.number().required(),
-        name: Joi.string().required(),
-        url: Joi.string().required(),
-        size: Joi.string().required(),
+        imageID: Joi.string().required(),
+        imageString: Joi.string().required(),
     });
     
     return schema.validate(data);
